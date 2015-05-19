@@ -180,6 +180,15 @@ public interface DeviceHost {
     public void disableDiscovery();
 
     public boolean sendRawFrame(byte[] data);
+    
+    public void enableCE_A();
+
+    public void disableCE_A();
+
+    public void enableCE_B();
+
+    public void disableCE_B();
+
 
     public boolean routeAid(byte[] aid, int route);
 

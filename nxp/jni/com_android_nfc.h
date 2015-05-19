@@ -102,6 +102,8 @@ extern "C" {
 #define TARGET_TYPE_NDEF_FORMATABLE       7
 #define TARGET_TYPE_MIFARE_CLASSIC        8
 #define TARGET_TYPE_MIFARE_UL             9
+#define TARGET_TYPE_ISO14443_4A_PCD       100
+#define TARGET_TYPE_ISO14443_4B_PCD       101
 
 #define SMX_SECURE_ELEMENT_ID   11259375
 
@@ -120,7 +122,7 @@ extern "C" {
 /* Utility macros for logging */
 #define GET_LEVEL(status) ((status)==NFCSTATUS_SUCCESS)?ANDROID_LOG_DEBUG:ANDROID_LOG_WARN
 
-#if 0
+#if 1
   #define LOG_CALLBACK(funcName, status)  LOG_PRI(GET_LEVEL(status), LOG_TAG, "Callback: %s() - status=0x%04x[%s]", funcName, status, nfc_jni_get_status_name(status));
   #define TRACE(...) ALOG(LOG_DEBUG, LOG_TAG, __VA_ARGS__)
   #define TRACE_ENABLED 1

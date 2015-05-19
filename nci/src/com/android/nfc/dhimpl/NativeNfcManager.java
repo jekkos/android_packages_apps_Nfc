@@ -111,6 +111,14 @@ public class NativeNfcManager implements DeviceHost {
                 params.shouldEnableP2p(), restart);
     }
 
+    public void enableCE_A() { }
+
+    public void disableCE_A() { }
+
+    public void enableCE_B() { }
+
+    public void disableCE_B() { }
+
     @Override
     public native void disableDiscovery();
 
